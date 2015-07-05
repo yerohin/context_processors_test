@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from datetime import datetime
 
 def local_item(request):
@@ -9,7 +9,8 @@ def local_item(request):
         'time': time,
     }
 
-    return render_to_response(
+    return render(
+        request,
         'main/local.html',
         context,
     )
@@ -19,7 +20,8 @@ def global_item(request):
     context = {
         'time': time,
     }
-    return render_to_response(
+    return render(
+        request,
         'main/global.html',
         context
     )
