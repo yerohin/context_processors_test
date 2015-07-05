@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Context processors test</title>
+  </head>
+  <body>
+    <header>
+      <a href="{% url "main_local" %}">local item</a>
+      <a href="{% url "main_global" %}">global item</a>
+    </header>
+    <section>
+      <h1>Context processors test</h1>
+      {% block content %}
+      <p>content goes here</p>
+      {% endblock %}
+    </section>
+  </body>
+</html>
